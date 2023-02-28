@@ -10,7 +10,7 @@
 name: Build HK1 Mini 21.02
 
 on:
-  workflow_dispatch:
+  workflow_dispatch
   #schedule:
   #  - cron: 0 17 * * *
   # watch:
