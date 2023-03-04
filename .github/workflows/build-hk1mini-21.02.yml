@@ -21,11 +21,13 @@ env:
   CONFIG_FILE: config/hk1-mini.config
   EXTRA_CONFIG_FILE: config/rpi-extra.config
   UNIVERSAL_CONFIG_FILE: config/universal.config
+  
   #Binaries Platform
   CLASH_BINARY: armv7
   V2RAYA_BINARY: arm32-v7a
   SPEEDTEST_CLI_BINARY: armel
   SUBFINDER_BINARY: armv7
+  
   #Workflow Infos
   SOURCE_URL: https://github.com/immortalwrt/immortalwrt
   SOURCE_BRANCH: 21.02
@@ -35,7 +37,7 @@ env:
   FIRMWARE_RELEASE_UPLOAD: true
   WEB_ROOT_PATH: /data/www/openwrt.cc
   TZ: Asia/Jakarta
-  //GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 jobs:
   Toolchain:
