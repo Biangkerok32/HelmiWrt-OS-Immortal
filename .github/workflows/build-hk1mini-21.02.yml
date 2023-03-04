@@ -35,7 +35,7 @@ env:
   FIRMWARE_RELEASE_UPLOAD: true
   WEB_ROOT_PATH: /data/www/openwrt.cc
   TZ: Asia/Jakarta
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  //GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   Toolchain:
@@ -181,7 +181,7 @@ jobs:
         if: env.TOOLCHAIN_RELEASE_UPLOAD == 'true' && steps.hash.outputs.REBUILD_TOOLCHAIN == 'true'
         uses: mknejp/delete-release-assets@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           tag: ${{ env.TOOLCHAIN_TAG }}
           assets: "${{ env.TOOLCHAIN_IMAGE }}.*"
           fail-if-no-assets: false
