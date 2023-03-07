@@ -180,7 +180,7 @@ jobs:
         if: env.TOOLCHAIN_RELEASE_UPLOAD == 'true' && steps.hash.outputs.REBUILD_TOOLCHAIN == 'true'
         uses: mknejp/delete-release-assets@v1
         with:
-          token: ${{ secrets.GH_OKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           tag: ${{ env.TOOLCHAIN_TAG }}
           assets: "${{ env.TOOLCHAIN_IMAGE }}.*"
           fail-if-no-assets: false
@@ -196,7 +196,7 @@ jobs:
           replacesArtifacts: true
           tag: ${{ env.TOOLCHAIN_TAG }}
           commit: ${{ env.CURRENT_BRANCH }}
-          token: ${{ secrets.HELMIWRT_RW }}
+          token: ${{ secrets.GH_TOKEN }}
           artifacts: output/*
 
   Build:
@@ -422,5 +422,5 @@ jobs:
           tag: helmiwrt-${{ env.BUILD_DATE }}
           bodyFile: release_body.txt
           commit: ${{ env.CURRENT_BRANCH }}
-          token: ${{ secrets.HELMIWRT_RW }}
+          token: ${{ secrets.GH_TOKEN }}
           artifacts: ${{ env.OPENWRT_ROOT_PATH }}/bin/targets/${{ env.DEVICE_TARGET }}/${{ env.DEVICE_SUBTARGET }}/*
