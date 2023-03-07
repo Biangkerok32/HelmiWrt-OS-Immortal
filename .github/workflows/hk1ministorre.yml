@@ -7,7 +7,7 @@
 # HelmiWrt OS by helmiau.com
 #=================================================
 
-name: Build Armv7 21.02
+name: Build Armv7 Istore
 
 on:
   workflow_dispatch:
